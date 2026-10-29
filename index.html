@@ -479,7 +479,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
   function init(data){
     DATA=data;
     ALL=(data.tweets||[]).map(function(t){ t._day=kstDay(t.created_at); t.text=unent(t.text); BY[t.id]=t; return t; });
-    state.wKey="xyr-work-"+(data.account||"");
+    state.wKey="xyr-work-"+(data.account||"")+(SYNC? "-"+SYNC.user : "");
     var w=store(state.wKey); if(w && w.events) W=w; else migrateOld();
     W.events.forEach(function(e){ e.items=e.items.filter(function(x){return BY[x.id];}); e.name=unent(e.name); });
     W.events=W.events.filter(function(e){return e.items.length;});
@@ -986,16 +986,17 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
 
 
   // ---------- 폰·PC 찜 목록 자동 동기화 (구글 앱스 스크립트 sync.gs)
-  // 받은 링크의 #sync=주소&k=비밀글자 를 이 기기에 기억해 두고, 고칠 때마다 보내고 열 때마다 받아 합침
+  // 받은 링크의 #sync=주소&u=이름&k=그 사람 비밀글자 를 이 기기에 기억해 두고, 고칠 때마다 보내고 열 때마다 받아 합침
+  // 찜 목록은 사람마다 따로 (같은 기기에서 다른 사람 링크를 열면 그 사람 목록으로 바뀜)
   var SYNC=null, sy={busy:false, dirty:false, ok:null, err:"", last:0, timer:null, pending:false};
   (function(){
     var conf=null;
     try{
       var h=new URLSearchParams(location.hash.replace(/^#/,""));
-      if(h.get("sync") && h.get("k")){ conf={url:h.get("sync"), key:h.get("k")}; store("xyr-sync", conf); }
+      if(h.get("sync") && h.get("k") && h.get("u")){ conf={url:h.get("sync"), user:h.get("u"), key:h.get("k")}; store("xyr-sync", conf); }
     }catch(e){}
     conf=conf||store("xyr-sync");
-    if(conf && /^https:\/\/script\.google(usercontent)?\.com\//.test(conf.url||"") && conf.key) SYNC=conf;
+    if(conf && /^https:\/\/script\.google(usercontent)?\.com\//.test(conf.url||"") && conf.key && conf.user) SYNC=conf;
   })();
   function mergeWork(a, b){
     a=a||{}; b=b||{};
@@ -1044,10 +1045,10 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     var req;
     if(push){
       opt.method="POST"; opt.headers={"Content-Type":"text/plain;charset=utf-8"};
-      opt.body=JSON.stringify({key:SYNC.key, work:W, device:(window.innerWidth<720?"phone":"pc")});
+      opt.body=JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:(window.innerWidth<720?"phone":"pc")});
       req=fetch(SYNC.url, opt);
     } else {
-      req=fetch(SYNC.url+(SYNC.url.indexOf("?")<0?"?":"&")+"key="+encodeURIComponent(SYNC.key)+"&t="+Date.now(), opt);
+      req=fetch(SYNC.url+(SYNC.url.indexOf("?")<0?"?":"&")+"user="+encodeURIComponent(SYNC.user)+"&key="+encodeURIComponent(SYNC.key)+"&t="+Date.now(), opt);
     }
     req.then(function(r){ return r.json(); }).then(function(j){
       clearTimeout(killer); sy.busy=false;
@@ -1072,7 +1073,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       t = sy.err==="key" ? "동기화 주소가 맞지 않습니다. 받은 링크로 다시 열어 주세요 (고른 떡밥은 이 기기에 저장되어 있습니다)"
         : "인터넷에 연결되지 않아 고른 떡밥은 이 기기에만 저장되어 있습니다. 연결되면 자동으로 맞춥니다";
     } else if(sy.ok){
-      t="폰·PC 자동 동기화 켜짐 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤";
+      t=SYNC.user+" 님 찜 목록 · 폰·PC 자동 동기화 켜짐 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤";
     }
     el.textContent=t; el.hidden=!t; el.classList.toggle("bad", bad);
   }
@@ -1082,10 +1083,20 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       if(document.visibilityState==="visible"){ syncNow(); return; }
       // 탭을 닫거나 다른 앱으로 넘어갈 때 못 보낸 변경을 마지막으로 보냄
       if(sy.dirty && navigator.sendBeacon){
-        try{ if(navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"}))) sy.dirty=false; }catch(e){}
+        try{ if(navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"}))) sy.dirty=false; }catch(e){}
       }
     });
     window.addEventListener("online", function(){ if(SYNC) syncNow(); });
+    // 같은 탭에서 다른 사람 링크(주소 뒤 # 만 다름)를 열면 그 사람 목록으로 다시 시작
+    window.addEventListener("hashchange", function(){
+      try{
+        var h=new URLSearchParams(location.hash.replace(/^#/,""));
+        if(h.get("sync") && h.get("k") && h.get("u") && (!SYNC || SYNC.user!==h.get("u") || SYNC.key!==h.get("k") || SYNC.url!==h.get("sync"))){
+          if(sy.dirty && SYNC && navigator.sendBeacon){ try{ navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"})); }catch(e){} }
+          location.reload();
+        }
+      }catch(e){}
+    });
     window.addEventListener("focus", function(){ if(SYNC && Date.now()-sy.last>5000) syncNow(); });
     document.addEventListener("focusout", function(){ setTimeout(function(){ if(sy.pending && !busyUI()){ sy.pending=false; render(); } }, 300); });
     setInterval(function(){
