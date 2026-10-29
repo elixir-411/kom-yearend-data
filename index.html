@@ -54,6 +54,8 @@ h1{font-size:24px;line-height:1.4;margin:0 0 6px;font-weight:700}
 .meta{color:var(--ink2);font-size:13px;margin:0 0 28px}
 .syncmsg{margin-top:-20px}
 .syncmsg.bad{color:var(--accent)}
+.viewonly .zzim,.viewonly .pz,.viewonly #clearEv,.viewonly #openWork,.viewonly #evDel,.viewonly [data-rep],.viewonly [data-out],.viewonly [data-split]{opacity:.4;cursor:not-allowed}
+.viewonly #evName,.viewonly #evStart,.viewonly #evEnd{pointer-events:none;opacity:.6}
 .dlbar .dlnote{font-size:12px;color:var(--ink2)}
 .tabsrow{margin-bottom:24px}
 .controls{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:flex-end;margin-bottom:28px}
@@ -993,7 +995,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     var conf=null;
     try{
       var h=new URLSearchParams(location.hash.replace(/^#/,""));
-      if(h.get("sync") && h.get("k") && h.get("u")){ conf={url:h.get("sync"), user:h.get("u"), key:h.get("k")}; store("xyr-sync", conf); }
+      if(h.get("sync") && h.get("k") && h.get("u")){ conf={url:h.get("sync"), user:h.get("u"), key:h.get("k"), view:h.get("v")==="1"}; store("xyr-sync", conf); }
     }catch(e){}
     conf=conf||store("xyr-sync");
     if(conf && /^https:\/\/script\.google(usercontent)?\.com\//.test(conf.url||"") && conf.key && conf.user) SYNC=conf;
@@ -1023,16 +1025,16 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
   }
   function busyUI(){ var a=document.activeElement; return !!popEl || (a && /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName) && a.closest("#list")); }
   function applyRemote(rw){
-    var merged=mergeWork(W, rw);
+    var merged = SYNC.view ? {events:rw.events||[], del:rw.del||{}, dl:rw.dl, seq:rw.seq||1} : mergeWork(W, rw);
     var mine=workSig(W), ms=workSig(merged);
-    if(ms!==workSig(rw)) sy.dirty=true;          // 이 기기에만 있는 변경 → 보내기
+    if(!SYNC.view && ms!==workSig(rw)) sy.dirty=true;          // 이 기기에만 있는 변경 → 보내기
     if(ms===mine) return;
     W=merged; refreshSnap(); store(state.wKey, W); applyDl();
     if(state.selEv && !evById(state.selEv)) state.selEv=null;
     if(DATA){ if(busyUI()) sy.pending=true; else render(); }
   }
   function syncSoon(){
-    if(!SYNC) return;
+    if(!SYNC || SYNC.view) return;
     sy.dirty=true; showSync();
     clearTimeout(sy.timer); sy.timer=setTimeout(syncNow, 1200);
   }
@@ -1073,7 +1075,8 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       t = sy.err==="key" ? "동기화 주소가 맞지 않습니다. 받은 링크로 다시 열어 주세요 (고른 떡밥은 이 기기에 저장되어 있습니다)"
         : "인터넷에 연결되지 않아 고른 떡밥은 이 기기에만 저장되어 있습니다. 연결되면 자동으로 맞춥니다";
     } else if(sy.ok){
-      t=SYNC.user+" 님 찜 목록 · 폰·PC 자동 동기화 켜짐 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤";
+      t = SYNC.view ? "지켜보기 전용 · "+SYNC.user+" 님 찜 목록 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤 (여기서는 고칠 수 없습니다)"
+                    : SYNC.user+" 님 찜 목록 · 폰·PC 자동 동기화 켜짐 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤";
     }
     el.textContent=t; el.hidden=!t; el.classList.toggle("bad", bad);
   }
@@ -1082,17 +1085,30 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       if(!SYNC) return;
       if(document.visibilityState==="visible"){ syncNow(); return; }
       // 탭을 닫거나 다른 앱으로 넘어갈 때 못 보낸 변경을 마지막으로 보냄
-      if(sy.dirty && navigator.sendBeacon){
+      if(sy.dirty && !SYNC.view && navigator.sendBeacon){
         try{ if(navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"}))) sy.dirty=false; }catch(e){}
       }
     });
     window.addEventListener("online", function(){ if(SYNC) syncNow(); });
+    // 지켜보기 전용 링크: 찜·떡밥 고치기 막음 (보기용 필터·탭은 그대로)
+    if(SYNC && SYNC.view){
+      document.documentElement.classList.add("viewonly");
+      var EDIT='.zzim, .pz, .pop button, #clearEv, #undoClear, #openWork, #evDel, [data-rep], [data-out], [data-split]';
+      document.addEventListener("click", function(e){
+        if(!e.target.closest || !e.target.closest(EDIT)) return;
+        e.preventDefault(); e.stopPropagation();
+        var m=$("syncMsg"); if(m){ m.hidden=false; m.classList.add("bad"); m.textContent="지켜보기 전용 링크라 고칠 수 없습니다. "+SYNC.user+" 님이 고르면 여기에 자동으로 나타납니다"; setTimeout(showSync, 3500); }
+      }, true);
+      ["change","input"].forEach(function(t){ document.addEventListener(t, function(e){
+        if(e.target && /^(evName|evStart|evEnd)$/.test(e.target.id)){ e.stopPropagation(); e.preventDefault(); render(); }
+      }, true); });
+    }
     // 같은 탭에서 다른 사람 링크(주소 뒤 # 만 다름)를 열면 그 사람 목록으로 다시 시작
     window.addEventListener("hashchange", function(){
       try{
         var h=new URLSearchParams(location.hash.replace(/^#/,""));
-        if(h.get("sync") && h.get("k") && h.get("u") && (!SYNC || SYNC.user!==h.get("u") || SYNC.key!==h.get("k") || SYNC.url!==h.get("sync"))){
-          if(sy.dirty && SYNC && navigator.sendBeacon){ try{ navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"})); }catch(e){} }
+        if(h.get("sync") && h.get("k") && h.get("u") && (!SYNC || SYNC.user!==h.get("u") || SYNC.key!==h.get("k") || SYNC.url!==h.get("sync") || !!SYNC.view!==(h.get("v")==="1"))){
+          if(sy.dirty && SYNC && !SYNC.view && navigator.sendBeacon){ try{ navigator.sendBeacon(SYNC.url, new Blob([JSON.stringify({user:SYNC.user, key:SYNC.key, work:W, device:"beacon"})],{type:"text/plain"})); }catch(e){} }
           location.reload();
         }
       }catch(e){}
@@ -1102,7 +1118,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     setInterval(function(){
       if(!SYNC || !DATA) return;
       if(sy.pending && !busyUI()){ sy.pending=false; render(); }
-      if(document.visibilityState==="visible" && !sy.busy && (sy.dirty || Date.now()-sy.last>45000)) syncNow();
+      if(document.visibilityState==="visible" && !sy.busy && (sy.dirty || Date.now()-sy.last>(SYNC.view?20000:45000))) syncNow();
     }, 15000);
   }
 
