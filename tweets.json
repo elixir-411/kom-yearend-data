@@ -1,6 +1,6 @@
 {
  "account": "karinaofmoment",
- "collected_at": "2026-10-17T15:10:29Z",
+ "collected_at": "2026-10-29T00:26:32Z",
  "range": [
   "2025-10-17",
   "2026-12-31"
@@ -8,16 +8,1160 @@
  "mode": "browser",
  "tweets": [
   {
+   "id": "2115264149127401567",
+   "created_at": "2026-10-28T02:07:27.000Z",
+   "text": "얼빡 클로즈업 좋다 💙",
+   "url": "https://x.com/karinaofmoment/status/2115264149127401567",
+   "likes": 1512,
+   "reposts": 287,
+   "quotes": 4,
+   "replies": 0,
+   "bookmarks": 184,
+   "impressions": 18472,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1080,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2115264128176861184/img/bjQUddfgwYl0NAUM.jpg",
+     "video": "https://video.twimg.com/amplify_video/2115264128176861184/vid/avc1/1080x1080/vPheRU1UvRIcY6SM.mp4?tag=29",
+     "duration_ms": 3748
+    }
+   ]
+  },
+  {
+   "id": "2115263472514773246",
+   "created_at": "2026-10-28T02:04:46.000Z",
+   "text": "[MLB] MLB WINTER CITY: SAVE KARINA\n\n🔗 https://t.co/OSUfZpgNi6",
+   "url": "https://x.com/karinaofmoment/status/2115263472514773246",
+   "likes": 514,
+   "reposts": 288,
+   "quotes": 5,
+   "replies": 1,
+   "bookmarks": 64,
+   "impressions": 14949,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2115263430802448384/img/AHTPrM8l40onY8a1.jpg",
+     "video": "https://video.twimg.com/amplify_video/2115263430802448384/vid/avc1/1920x1080/oUG1tFZ3NQ1Ezpjg.mp4?tag=29",
+     "duration_ms": 27910
+    }
+   ]
+  },
+  {
+   "id": "2115050441725870127",
+   "created_at": "2026-10-27T11:58:15.000Z",
+   "text": "쑥쑥이랑 지민이🥺‼️",
+   "url": "https://x.com/karinaofmoment/status/2115050441725870127",
+   "likes": 788,
+   "reposts": 278,
+   "quotes": 36,
+   "replies": 0,
+   "bookmarks": 46,
+   "impressions": 14741,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1440,
+     "thumb": "https://pbs.twimg.com/media/HVorKrQaYAA0F9l.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVorKrQaYAA0F9l.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2114665595870265395",
+   "created_at": "2026-10-26T10:29:01.000Z",
+   "text": "261026 KB 국민은행 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2114665595870265395",
+   "likes": 418,
+   "reposts": 159,
+   "quotes": 7,
+   "replies": 0,
+   "bookmarks": 38,
+   "impressions": 12981,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 720,
+     "h": 1280,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2114665569551355904/img/c8tfoNLHFNy1t_-k.jpg",
+     "video": "https://video.twimg.com/amplify_video/2114665569551355904/vid/avc1/720x1280/8gnZ6bSD30HrsxNw.mp4?tag=29",
+     "duration_ms": 28933
+    }
+   ]
+  },
+  {
+   "id": "2114629474549661963",
+   "created_at": "2026-10-26T08:05:29.000Z",
+   "text": "[프렌즈아이드롭 X 에스파] #에스파, '프렌즈아이드롭'&amp;'프렌즈 아이쓱' 모델 발탁! 인터뷰 영상\n\n🔗 https://t.co/zqdsX3GaP0",
+   "url": "https://x.com/karinaofmoment/status/2114629474549661963",
+   "likes": 245,
+   "reposts": 118,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 29,
+   "impressions": 10290,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2114629406232915969/img/TPWHPrNwOz-A-c6U.jpg",
+     "video": "https://video.twimg.com/amplify_video/2114629406232915969/vid/avc1/1920x1080/Jvb7KUHw-NU3OkTL.mp4?tag=29",
+     "duration_ms": 55100
+    }
+   ]
+  },
+  {
+   "id": "2114628903750815974",
+   "created_at": "2026-10-26T08:03:13.000Z",
+   "text": "261026 MLB 코리아 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2114628903750815974",
+   "likes": 952,
+   "reposts": 254,
+   "quotes": 6,
+   "replies": 1,
+   "bookmarks": 133,
+   "impressions": 16144,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVirxIwaMAAuvLg.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVirxIwaMAAuvLg.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVirxZWakAAshaX.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVirxZWakAAshaX.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVirxo8asAAYcaG.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVirxo8asAAYcaG.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVirx4-aYAArJW0.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVirx4-aYAArJW0.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2114513556939096388",
+   "created_at": "2026-10-26T00:24:52.000Z",
+   "text": "MLB - KARINA IN THE WINTER CITY #카리나",
+   "url": "https://x.com/karinaofmoment/status/2114513556939096388",
+   "likes": 3503,
+   "reposts": 632,
+   "quotes": 36,
+   "replies": 0,
+   "bookmarks": 430,
+   "impressions": 39908,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1366,
+     "h": 2048,
+     "thumb": "https://pbs.twimg.com/media/HVhC3A_bUAAiAAz.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVhC3A_bUAAiAAz.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1366,
+     "h": 2048,
+     "thumb": "https://pbs.twimg.com/media/HVhC3ZDaYAAXP0l.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVhC3ZDaYAAXP0l.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1365,
+     "h": 2048,
+     "thumb": "https://pbs.twimg.com/media/HVhC3u-bcAAB7W_.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVhC3u-bcAAB7W_.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2114315493624693023",
+   "created_at": "2026-10-25T11:17:50.000Z",
+   "text": "쑥쑥이 🥺🥺",
+   "url": "https://x.com/karinaofmoment/status/2114315493624693023",
+   "likes": 1178,
+   "reposts": 287,
+   "quotes": 9,
+   "replies": 0,
+   "bookmarks": 51,
+   "impressions": 16423,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 3024,
+     "h": 4032,
+     "thumb": "https://pbs.twimg.com/media/HVeOuLObsAAi1V4.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVeOuLObsAAi1V4.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 3024,
+     "h": 4032,
+     "thumb": "https://pbs.twimg.com/media/HVeOuqfaUAAmVZm.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVeOuqfaUAAmVZm.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 959,
+     "h": 717,
+     "thumb": "https://pbs.twimg.com/media/HVeOvF8aIAAaU3W.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVeOvF8aIAAaU3W.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2114314879704367424",
+   "created_at": "2026-10-25T11:15:24.000Z",
+   "text": "쑥쑥이 나이키 키즈 👶🏻",
+   "url": "https://x.com/karinaofmoment/status/2114314879704367424",
+   "likes": 424,
+   "reposts": 157,
+   "quotes": 12,
+   "replies": 0,
+   "bookmarks": 17,
+   "impressions": 11376,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 959,
+     "h": 717,
+     "thumb": "https://pbs.twimg.com/media/HVeOLCdbsAA6t-L.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVeOLCdbsAA6t-L.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1262,
+     "h": 1488,
+     "thumb": "https://pbs.twimg.com/media/HVeOLUFbUAA1QBy.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVeOLUFbUAA1QBy.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2113559678944973128",
+   "created_at": "2026-10-23T09:14:30.000Z",
+   "text": "261023 닝닝 인스타 스토리 #카리나\n\n러뷰🩷🩷🩷🩷\n같은침대zzz",
+   "url": "https://x.com/karinaofmoment/status/2113559678944973128",
+   "likes": 266,
+   "reposts": 92,
+   "quotes": 4,
+   "replies": 0,
+   "bookmarks": 24,
+   "impressions": 13003,
+   "is_reply": false,
+   "is_quote": true,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1206,
+     "h": 2144,
+     "thumb": "https://pbs.twimg.com/media/HVTfUkaa8AAoYHI.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVTfUkaa8AAoYHI.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1206,
+     "h": 2144,
+     "thumb": "https://pbs.twimg.com/media/HVTfU2tbUAAXM8L.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVTfU2tbUAAXM8L.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2113557654509367579",
+   "created_at": "2026-10-23T09:06:27.000Z",
+   "text": "261023 #카리나 인스타 스토리💙\n\n너무귀엽진말자참는데한계가있다\n아기가 이렇게 순해도되나\n닝구야 생일축하하고\n나의아기만두\n많이 좋아하고~\n생일축하해막내야",
+   "url": "https://x.com/karinaofmoment/status/2113557654509367579",
+   "likes": 772,
+   "reposts": 333,
+   "quotes": 21,
+   "replies": 2,
+   "bookmarks": 97,
+   "impressions": 45191,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1206,
+     "h": 2144,
+     "thumb": "https://pbs.twimg.com/media/HVTddpVbMAAIFkl.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVTddpVbMAAIFkl.jpg?name=orig"
+    },
+    {
+     "type": "video",
+     "w": 720,
+     "h": 1280,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113557631449305088/img/0Z4jpW4lcc58i-wP.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113557631449305088/vid/avc1/720x1280/mT8A1T9IqzE8jqoS.mp4?tag=29",
+     "duration_ms": 3766
+    },
+    {
+     "type": "photo",
+     "w": 1206,
+     "h": 2144,
+     "thumb": "https://pbs.twimg.com/media/HVTdevea8AAPU9U.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVTdevea8AAPU9U.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1206,
+     "h": 2144,
+     "thumb": "https://pbs.twimg.com/media/HVTde_jboAAfyqX.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVTde_jboAAfyqX.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2113548503029072182",
+   "created_at": "2026-10-23T08:30:05.000Z",
+   "text": "눈싸움👀",
+   "url": "https://x.com/karinaofmoment/status/2113548503029072182",
+   "likes": 377,
+   "reposts": 89,
+   "quotes": 3,
+   "replies": 0,
+   "bookmarks": 58,
+   "impressions": 12305,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1080,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113548472687415296/img/KCl7KZx1_EIiqw-H.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113548472687415296/vid/avc1/1080x1080/Mjm3H1Kyk6iVEi80.mp4?tag=29",
+     "duration_ms": 23721
+    }
+   ]
+  },
+  {
+   "id": "2113547562108203230",
+   "created_at": "2026-10-23T08:26:21.000Z",
+   "text": "261023 딥 매거진 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2113547562108203230",
+   "likes": 513,
+   "reposts": 174,
+   "quotes": 0,
+   "replies": 0,
+   "bookmarks": 72,
+   "impressions": 9236,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 720,
+     "h": 960,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113547488456327169/img/oiJG6rF3SpeoMV2s.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113547488456327169/vid/avc1/720x960/y2Lz3McdJBrSmqVk.mp4?tag=29",
+     "duration_ms": 25733
+    },
+    {
+     "type": "video",
+     "w": 720,
+     "h": 960,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113547513705955328/img/dYRgToD0VHEi-0kx.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113547513705955328/vid/avc1/720x960/WTsXKc5r4NG9g1d5.mp4?tag=29",
+     "duration_ms": 20300
+    },
+    {
+     "type": "video",
+     "w": 720,
+     "h": 960,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113547542101397504/img/GoxeB-eNKfNvLtEM.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113547542101397504/vid/avc1/720x960/aEk0D__lj8LgUapa.mp4?tag=29",
+     "duration_ms": 15333
+    }
+   ]
+  },
+  {
+   "id": "2113180256878432692",
+   "created_at": "2026-10-22T08:06:48.000Z",
+   "text": "261022 노르디스크 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2113180256878432692",
+   "likes": 281,
+   "reposts": 114,
+   "quotes": 1,
+   "replies": 0,
+   "bookmarks": 25,
+   "impressions": 10371,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 720,
+     "h": 1280,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113180237592956928/img/gaqLplJeXVuq3QKU.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113180237592956928/vid/avc1/720x1280/2Nupuz6GzWfqG6JN.mp4?tag=29",
+     "duration_ms": 11845
+    }
+   ]
+  },
+  {
+   "id": "2113101008117301326",
+   "created_at": "2026-10-22T02:51:54.000Z",
+   "text": "지민이 우쿨렐레 연주 🎶",
+   "url": "https://x.com/karinaofmoment/status/2113101008117301326",
+   "likes": 1490,
+   "reposts": 640,
+   "quotes": 72,
+   "replies": 0,
+   "bookmarks": 265,
+   "impressions": 66267,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1280,
+     "h": 720,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2113100915750354945/img/oDQJ0Ww2-QVQaAGX.jpg",
+     "video": "https://video.twimg.com/amplify_video/2113100915750354945/vid/avc1/1280x720/F8Q6T26oiFPtAlfq.mp4?tag=29",
+     "duration_ms": 75920
+    }
+   ]
+  },
+  {
+   "id": "2112906985972891891",
+   "created_at": "2026-10-21T14:00:56.000Z",
+   "text": "지민 도슨트 🎨",
+   "url": "https://x.com/karinaofmoment/status/2112906985972891891",
+   "likes": 282,
+   "reposts": 71,
+   "quotes": 3,
+   "replies": 0,
+   "bookmarks": 54,
+   "impressions": 9355,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112906897007489026/img/rT69SBT5YS5dnh0Q.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112906897007489026/vid/avc1/1920x1080/b4MHphB3hkZ-qg0z.mp4?tag=29",
+     "duration_ms": 95553
+    }
+   ]
+  },
+  {
+   "id": "2112904879329226837",
+   "created_at": "2026-10-21T13:52:33.000Z",
+   "text": "A DAY\nIN NEW YORK. \nA LITTLE ART. \nA GOOD MEAL. \nSOMETHING SWEET. \nA NIGHT OF MUSIC. \nJUST ONE REALLY GOOD DAY\nIN NEW YORK. \nUNTIL NEXT TIME.  \n\nFOR MY, \nLOVE, KARINA",
+   "url": "https://x.com/karinaofmoment/status/2112904879329226837",
+   "likes": 514,
+   "reposts": 241,
+   "quotes": 8,
+   "replies": 0,
+   "bookmarks": 63,
+   "impressions": 14400,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112904824354402304/img/5GpF0V_Yp3judDAf.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112904824354402304/vid/avc1/1920x1080/af1NdwiB4KTnI7Sy.mp4?tag=29",
+     "duration_ms": 19894
+    }
+   ]
+  },
+  {
+   "id": "2112901456026341851",
+   "created_at": "2026-10-21T13:38:57.000Z",
+   "text": "때지 한입 와앙",
+   "url": "https://x.com/karinaofmoment/status/2112901456026341851",
+   "likes": 699,
+   "reposts": 118,
+   "quotes": 8,
+   "replies": 0,
+   "bookmarks": 139,
+   "impressions": 25740,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112901336446750720/img/MNluZRRrx3FK-oEv.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112901336446750720/vid/avc1/1146x1080/lSDfs-yVAgvz9ORh.mp4?tag=29",
+     "duration_ms": 28278
+    }
+   ]
+  },
+  {
+   "id": "2112901213461389620",
+   "created_at": "2026-10-21T13:37:59.000Z",
+   "text": "깡하디!",
+   "url": "https://x.com/karinaofmoment/status/2112901213461389620",
+   "likes": 323,
+   "reposts": 104,
+   "quotes": 4,
+   "replies": 0,
+   "bookmarks": 53,
+   "impressions": 11290,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112901133010386944/img/TtilFMRIo9qYjq_6.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112901133010386944/vid/avc1/1146x1080/YdZiuz8reZOx9dpr.mp4?tag=29",
+     "duration_ms": 1793
+    }
+   ]
+  },
+  {
+   "id": "2112900575058878942",
+   "created_at": "2026-10-21T13:35:27.000Z",
+   "text": "📽️ All That Jazz",
+   "url": "https://x.com/karinaofmoment/status/2112900575058878942",
+   "likes": 3010,
+   "reposts": 515,
+   "quotes": 11,
+   "replies": 0,
+   "bookmarks": 904,
+   "impressions": 45802,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112900286360752128/img/-QefBNE-Pkzyqwlp.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112900286360752128/vid/avc1/1920x1080/tupu-pZD9q-n6Orw.mp4?tag=29",
+     "duration_ms": 69736
+    }
+   ]
+  },
+  {
+   "id": "2112900257701126284",
+   "created_at": "2026-10-21T13:34:11.000Z",
+   "text": "😆",
+   "url": "https://x.com/karinaofmoment/status/2112900257701126284",
+   "likes": 480,
+   "reposts": 112,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 76,
+   "impressions": 9437,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112900231641882625/img/NOGQgzXIBz_2CtJe.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112900231641882625/vid/avc1/1146x1080/4n1b-4jj_ZpCTOpf.mp4?tag=29",
+     "duration_ms": 3962
+    }
+   ]
+  },
+  {
+   "id": "2112900207717585160",
+   "created_at": "2026-10-21T13:33:59.000Z",
+   "text": "💃",
+   "url": "https://x.com/karinaofmoment/status/2112900207717585160",
+   "likes": 34951,
+   "reposts": 3000,
+   "quotes": 206,
+   "replies": 0,
+   "bookmarks": 7940,
+   "impressions": 528519,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112900167259328512/img/9cfT6gZmISN1Tn2r.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112900167259328512/vid/avc1/1146x1080/HgEqdbw2YFWiCYKx.mp4?tag=29",
+     "duration_ms": 14806
+    }
+   ]
+  },
+  {
+   "id": "2112898876197990742",
+   "created_at": "2026-10-21T13:28:42.000Z",
+   "text": "시카고 보기 전부터 떨려하고 커트콘때 신났어 &gt;_&lt;",
+   "url": "https://x.com/karinaofmoment/status/2112898876197990742",
+   "likes": 293,
+   "reposts": 82,
+   "quotes": 3,
+   "replies": 0,
+   "bookmarks": 53,
+   "impressions": 12637,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112898729208696832/img/VmL6_eYvzJU0JRGF.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112898729208696832/vid/avc1/1146x1080/FrCV7_e4Hohdj6eb.mp4?tag=29",
+     "duration_ms": 37162
+    }
+   ]
+  },
+  {
+   "id": "2112898391365816748",
+   "created_at": "2026-10-21T13:26:46.000Z",
+   "text": "매니저 언니 케이크 먼저 먹으라구 말하는 거 예뻐🫳🫳",
+   "url": "https://x.com/karinaofmoment/status/2112898391365816748",
+   "likes": 232,
+   "reposts": 57,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 35,
+   "impressions": 10017,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112898318582140928/img/djlfCJ1eEnL9UDB2.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112898318582140928/vid/avc1/1920x1080/QTxcC7smgPyGH5fj.mp4?tag=29",
+     "duration_ms": 17684
+    }
+   ]
+  },
+  {
+   "id": "2112898223291650549",
+   "created_at": "2026-10-21T13:26:06.000Z",
+   "text": "도리언니 레드벨벳 케이크는 무슨 맛인지 잘 모르겠어 발언에 \"충격\" 😮",
+   "url": "https://x.com/karinaofmoment/status/2112898223291650549",
+   "likes": 346,
+   "reposts": 78,
+   "quotes": 7,
+   "replies": 0,
+   "bookmarks": 51,
+   "impressions": 13028,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112898103850479616/img/brwBN1431-oevIUv.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112898103850479616/vid/avc1/1920x1080/semarPToLrrCT1Ex.mp4?tag=29",
+     "duration_ms": 15098
+    }
+   ]
+  },
+  {
+   "id": "2112897355251105964",
+   "created_at": "2026-10-21T13:22:39.000Z",
+   "text": "후웅🥺",
+   "url": "https://x.com/karinaofmoment/status/2112897355251105964",
+   "likes": 1242,
+   "reposts": 217,
+   "quotes": 4,
+   "replies": 0,
+   "bookmarks": 184,
+   "impressions": 20452,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112897319222046720/img/bQWGKtwB_lkQmoX7.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112897319222046720/vid/avc1/1146x1080/EUSTIo13qdqiWNK0.mp4?tag=29",
+     "duration_ms": 1751
+    }
+   ]
+  },
+  {
+   "id": "2112897221842833431",
+   "created_at": "2026-10-21T13:22:08.000Z",
+   "text": "스탭언니랑 바로 상황극 하는 거 귀여웅 ㅋㅋㅋ",
+   "url": "https://x.com/karinaofmoment/status/2112897221842833431",
+   "likes": 675,
+   "reposts": 113,
+   "quotes": 8,
+   "replies": 0,
+   "bookmarks": 124,
+   "impressions": 18021,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112897078594801664/img/SX_lO60gDvkIqpBg.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112897078594801664/vid/avc1/1146x1080/9BjtCSTD--vKuBXF.mp4?tag=29",
+     "duration_ms": 31531
+    }
+   ]
+  },
+  {
+   "id": "2112896903419687082",
+   "created_at": "2026-10-21T13:20:52.000Z",
+   "text": "올댓재즈 계속 연습하기🎶",
+   "url": "https://x.com/karinaofmoment/status/2112896903419687082",
+   "likes": 1939,
+   "reposts": 190,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 479,
+   "impressions": 22543,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112896846544973824/img/rb99OezYksCkE1G1.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112896846544973824/vid/avc1/1146x1080/dri0_mB2Q6Y47wu9.mp4?tag=29",
+     "duration_ms": 39581
+    }
+   ]
+  },
+  {
+   "id": "2112896160419700797",
+   "created_at": "2026-10-21T13:17:55.000Z",
+   "text": "꼬질강쥐🐶",
+   "url": "https://x.com/karinaofmoment/status/2112896160419700797",
+   "likes": 292,
+   "reposts": 62,
+   "quotes": 1,
+   "replies": 0,
+   "bookmarks": 43,
+   "impressions": 5963,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112896132229799936/img/Qbbg4x6L-a5in9Cc.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112896132229799936/vid/avc1/1146x1080/vfbizPQZi0Bc6CX2.mp4?tag=29",
+     "duration_ms": 3003
+    }
+   ]
+  },
+  {
+   "id": "2112895876209487938",
+   "created_at": "2026-10-21T13:16:47.000Z",
+   "text": "😘",
+   "url": "https://x.com/karinaofmoment/status/2112895876209487938",
+   "likes": 589,
+   "reposts": 110,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 111,
+   "impressions": 11882,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112895780650680321/img/WUUm6F2pCu6so49H.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112895780650680321/vid/avc1/1146x1080/4Px2j4auxfnuTv9g.mp4?tag=29",
+     "duration_ms": 3003
+    }
+   ]
+  },
+  {
+   "id": "2112895636488229005",
+   "created_at": "2026-10-21T13:15:50.000Z",
+   "text": "나는 케이크도 레드벨벳이 좋고\n걸그룹도 레드벨벳이 좋아 😘",
+   "url": "https://x.com/karinaofmoment/status/2112895636488229005",
+   "likes": 501,
+   "reposts": 142,
+   "quotes": 13,
+   "replies": 0,
+   "bookmarks": 69,
+   "impressions": 15051,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112895557111005184/img/bkMFff34i5jgnVl8.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112895557111005184/vid/avc1/1920x1080/hK_BGSMyWZ1J2i8E.mp4?tag=29",
+     "duration_ms": 7590
+    }
+   ]
+  },
+  {
+   "id": "2112895176024990082",
+   "created_at": "2026-10-21T13:14:00.000Z",
+   "text": "시카고 보기 전부터 신났어 😆",
+   "url": "https://x.com/karinaofmoment/status/2112895176024990082",
+   "likes": 308,
+   "reposts": 75,
+   "quotes": 0,
+   "replies": 0,
+   "bookmarks": 48,
+   "impressions": 6869,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112894989693005825/img/K35S3HtF-TCVqkBd.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112894989693005825/vid/avc1/1146x1080/gfw6CFnM3_S1O7kC.mp4?tag=29",
+     "duration_ms": 29195
+    }
+   ]
+  },
+  {
+   "id": "2112894542190186836",
+   "created_at": "2026-10-21T13:11:29.000Z",
+   "text": "볼이 너무 ㄱㅇㅇ",
+   "url": "https://x.com/karinaofmoment/status/2112894542190186836",
+   "likes": 1023,
+   "reposts": 236,
+   "quotes": 5,
+   "replies": 0,
+   "bookmarks": 156,
+   "impressions": 17408,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112894485717999616/img/qah5ZBQZTdmyZqdm.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112894485717999616/vid/avc1/1146x1080/LvX9LI8bO5AKO45C.mp4?tag=29",
+     "duration_ms": 16349
+    }
+   ]
+  },
+  {
+   "id": "2112893795482444023",
+   "created_at": "2026-10-21T13:08:31.000Z",
+   "text": "babo",
+   "url": "https://x.com/karinaofmoment/status/2112893795482444023",
+   "likes": 869,
+   "reposts": 223,
+   "quotes": 6,
+   "replies": 0,
+   "bookmarks": 114,
+   "impressions": 10786,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112893772195573760/img/qhA1gYHe6rFGnnDR.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112893772195573760/vid/avc1/1146x1080/Xp0tstsRrmi9_v0_.mp4?tag=29",
+     "duration_ms": 3253
+    }
+   ]
+  },
+  {
+   "id": "2112893555631083584",
+   "created_at": "2026-10-21T13:07:33.000Z",
+   "text": "",
+   "url": "https://x.com/karinaofmoment/status/2112893555631083584",
+   "likes": 3515,
+   "reposts": 571,
+   "quotes": 12,
+   "replies": 0,
+   "bookmarks": 416,
+   "impressions": 39429,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112893522865266688/img/GuQPsGGjT7_tNLWH.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112893522865266688/vid/avc1/1146x1080/eoK9ZBMjitiJcFkH.mp4?tag=29",
+     "duration_ms": 5672
+    }
+   ]
+  },
+  {
+   "id": "2112893264441593970",
+   "created_at": "2026-10-21T13:06:24.000Z",
+   "text": "👓",
+   "url": "https://x.com/karinaofmoment/status/2112893264441593970",
+   "likes": 645,
+   "reposts": 183,
+   "quotes": 8,
+   "replies": 0,
+   "bookmarks": 68,
+   "impressions": 12495,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1146,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112893174360461312/img/3-FD7Qx8363bfOxZ.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112893174360461312/vid/avc1/1146x1080/3T9-5URanq374xZP.mp4?tag=29",
+     "duration_ms": 23106
+    }
+   ]
+  },
+  {
+   "id": "2112819716876087587",
+   "created_at": "2026-10-21T08:14:09.000Z",
+   "text": "261021 노르디스크 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2112819716876087587",
+   "likes": 373,
+   "reposts": 109,
+   "quotes": 0,
+   "replies": 1,
+   "bookmarks": 35,
+   "impressions": 9263,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVI-UcoaQAAc1ZE.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVI-UcoaQAAc1ZE.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVI-UupbEAAW48o.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVI-UupbEAAW48o.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVI-VBKa8AAOeU5.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVI-VBKa8AAOeU5.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 1080,
+     "h": 1350,
+     "thumb": "https://pbs.twimg.com/media/HVI-VRebIAAW0Kg.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HVI-VRebIAAW0Kg.jpg?name=orig"
+    }
+   ]
+  },
+  {
+   "id": "2112533072013127985",
+   "created_at": "2026-10-20T13:15:07.000Z",
+   "text": "닝이 생파 포카 지민이랑 밴쿠버 가서 훠궈 먹을 때 지민이가 찍어준 사진 🥰",
+   "url": "https://x.com/karinaofmoment/status/2112533072013127985",
+   "likes": 709,
+   "reposts": 209,
+   "quotes": 3,
+   "replies": 0,
+   "bookmarks": 66,
+   "impressions": 45320,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112533021303963648/img/gX-da3AoDb6FhXEt.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112533021303963648/vid/avc1/1920x1080/oad5TQYzk-S1IqKf.mp4?tag=29",
+     "duration_ms": 39794
+    }
+   ]
+  },
+  {
+   "id": "2112523746976371046",
+   "created_at": "2026-10-20T12:38:04.000Z",
+   "text": "지민이가 닝이 옷 갈아입을 때 도와줬다고 ☺",
+   "url": "https://x.com/karinaofmoment/status/2112523746976371046",
+   "likes": 1269,
+   "reposts": 345,
+   "quotes": 14,
+   "replies": 0,
+   "bookmarks": 119,
+   "impressions": 60581,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112523718601891840/img/za3-En4_LK6ZaWpg.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112523718601891840/vid/avc1/1920x1080/OkLci7W24W_OmpLb.mp4?tag=29",
+     "duration_ms": 13383
+    }
+   ]
+  },
+  {
+   "id": "2112201423383650387",
+   "created_at": "2026-10-19T15:17:16.000Z",
+   "text": "",
+   "url": "https://x.com/karinaofmoment/status/2112201423383650387",
+   "likes": 765,
+   "reposts": 219,
+   "quotes": 2,
+   "replies": 0,
+   "bookmarks": 58,
+   "impressions": 14522,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1920,
+     "h": 1080,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112201408133087233/img/hgeBu0SVbAlyDrKx.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112201408133087233/vid/avc1/1920x1080/LR3epTY8ohyLoIrJ.mp4?tag=29",
+     "duration_ms": 2400
+    }
+   ]
+  },
+  {
+   "id": "2112200915734384836",
+   "created_at": "2026-10-19T15:15:15.000Z",
+   "text": "261020 프렌즈 아이드롭 인스타 #카리나",
+   "url": "https://x.com/karinaofmoment/status/2112200915734384836",
+   "likes": 296,
+   "reposts": 137,
+   "quotes": 6,
+   "replies": 0,
+   "bookmarks": 27,
+   "impressions": 10580,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "video",
+     "w": 1280,
+     "h": 720,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112200845836361728/img/xKTblbjak71IGj9l.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112200845836361728/vid/avc1/1280x720/M7qW1aFlCzwJUz2r.mp4?tag=29",
+     "duration_ms": 30037
+    },
+    {
+     "type": "video",
+     "w": 1280,
+     "h": 720,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112200867701219328/img/dzXOEEWDg0Z0qEGP.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112200867701219328/vid/avc1/1280x720/Ck5VapMFX_4vDMC3.mp4?tag=29",
+     "duration_ms": 30037
+    },
+    {
+     "type": "video",
+     "w": 1280,
+     "h": 720,
+     "thumb": "https://pbs.twimg.com/amplify_video_thumb/2112200895543013376/img/DhX8IVtGXuJJ0e7f.jpg",
+     "video": "https://video.twimg.com/amplify_video/2112200895543013376/vid/avc1/1280x720/eacvdX6Fu_c1BW35.mp4?tag=29",
+     "duration_ms": 15018
+    }
+   ]
+  },
+  {
+   "id": "2112094668733444303",
+   "created_at": "2026-10-19T08:13:04.000Z",
+   "text": "쑥쑥이 신생아 졸업파티 했다는게 너무 귀여워 🥺",
+   "url": "https://x.com/karinaofmoment/status/2112094668733444303",
+   "likes": 866,
+   "reposts": 187,
+   "quotes": 13,
+   "replies": 0,
+   "bookmarks": 55,
+   "impressions": 53497,
+   "is_reply": false,
+   "is_quote": false,
+   "media": [
+    {
+     "type": "photo",
+     "w": 1354,
+     "h": 2229,
+     "thumb": "https://pbs.twimg.com/media/HU-q5AgbQAAJPJO.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HU-q5AgbQAAJPJO.jpg?name=orig"
+    },
+    {
+     "type": "photo",
+     "w": 545,
+     "h": 360,
+     "thumb": "https://pbs.twimg.com/media/HU-q55VbwAACtCe.jpg?name=small",
+     "orig": "https://pbs.twimg.com/media/HU-q55VbwAACtCe.jpg?name=orig"
+    }
+   ]
+  },
+  {
    "id": "2111394588678369320",
    "created_at": "2026-10-17T09:51:12.000Z",
    "text": "컨버스 #카리나",
    "url": "https://x.com/karinaofmoment/status/2111394588678369320",
-   "likes": 1792,
-   "reposts": 425,
-   "quotes": 3,
+   "likes": 3714,
+   "reposts": 624,
+   "quotes": 8,
    "replies": 0,
-   "bookmarks": 190,
-   "impressions": 22787,
+   "bookmarks": 381,
+   "impressions": 49387,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -56,12 +1200,12 @@
    "created_at": "2026-10-17T07:36:17.000Z",
    "text": "261017 #카리나 인스타 스토리💙",
    "url": "https://x.com/karinaofmoment/status/2111360635112198242",
-   "likes": 607,
-   "reposts": 183,
-   "quotes": 36,
+   "likes": 733,
+   "reposts": 200,
+   "quotes": 43,
    "replies": 0,
-   "bookmarks": 49,
-   "impressions": 34931,
+   "bookmarks": 47,
+   "impressions": 46591,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -101,12 +1245,12 @@
    "created_at": "2026-10-17T04:42:43.000Z",
    "text": "🔔 스피드퀴즈 지민이",
    "url": "https://x.com/karinaofmoment/status/2111316958037844405",
-   "likes": 191,
-   "reposts": 27,
+   "likes": 319,
+   "reposts": 35,
    "quotes": 1,
    "replies": 0,
-   "bookmarks": 34,
-   "impressions": 6034,
+   "bookmarks": 65,
+   "impressions": 10497,
    "is_reply": false,
    "is_quote": true,
    "media": [
@@ -125,12 +1269,12 @@
    "created_at": "2026-10-17T04:39:47.000Z",
    "text": "261017 빌보드 차이나 인스타 #에스파",
    "url": "https://x.com/karinaofmoment/status/2111316220280815889",
-   "likes": 180,
-   "reposts": 47,
+   "likes": 246,
+   "reposts": 56,
    "quotes": 2,
    "replies": 0,
-   "bookmarks": 43,
-   "impressions": 8674,
+   "bookmarks": 55,
+   "impressions": 14601,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -149,12 +1293,12 @@
    "created_at": "2026-10-17T03:31:24.000Z",
    "text": "엄마 끝났네~? 목소리 너무 다정해🥺",
    "url": "https://x.com/karinaofmoment/status/2111299008391971039",
-   "likes": 436,
-   "reposts": 88,
+   "likes": 926,
+   "reposts": 143,
    "quotes": 2,
    "replies": 0,
-   "bookmarks": 50,
-   "impressions": 6223,
+   "bookmarks": 89,
+   "impressions": 14338,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -173,12 +1317,12 @@
    "created_at": "2026-10-17T03:29:39.000Z",
    "text": "제복착 😳🖤",
    "url": "https://x.com/karinaofmoment/status/2111298567319294138",
-   "likes": 261,
-   "reposts": 75,
-   "quotes": 1,
+   "likes": 484,
+   "reposts": 106,
+   "quotes": 2,
    "replies": 0,
-   "bookmarks": 28,
-   "impressions": 4948,
+   "bookmarks": 59,
+   "impressions": 8779,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -197,12 +1341,12 @@
    "created_at": "2026-10-17T03:29:09.000Z",
    "text": "지민이랑 뽀뇨🐶",
    "url": "https://x.com/karinaofmoment/status/2111298443734130930",
-   "likes": 418,
-   "reposts": 126,
-   "quotes": 0,
+   "likes": 974,
+   "reposts": 193,
+   "quotes": 3,
    "replies": 0,
-   "bookmarks": 39,
-   "impressions": 6492,
+   "bookmarks": 79,
+   "impressions": 15238,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -221,12 +1365,12 @@
    "created_at": "2026-10-17T03:23:08.000Z",
    "text": "261016 노르디스크 인스타 #카리나",
    "url": "https://x.com/karinaofmoment/status/2111296930777014602",
-   "likes": 228,
-   "reposts": 60,
+   "likes": 329,
+   "reposts": 73,
    "quotes": 0,
    "replies": 1,
-   "bookmarks": 18,
-   "impressions": 4766,
+   "bookmarks": 23,
+   "impressions": 7692,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -265,12 +1409,12 @@
    "created_at": "2026-10-17T03:21:29.000Z",
    "text": "[MLB] KARINA, THE NEW CURVE– Behind the Scenes\n\n🔗 https://t.co/AlJyYYMsUt",
    "url": "https://x.com/karinaofmoment/status/2111296514584941004",
-   "likes": 295,
-   "reposts": 119,
+   "likes": 353,
+   "reposts": 128,
    "quotes": 0,
    "replies": 1,
-   "bookmarks": 43,
-   "impressions": 5333,
+   "bookmarks": 45,
+   "impressions": 7126,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -289,12 +1433,12 @@
    "created_at": "2026-10-17T03:18:11.000Z",
    "text": "261017 #카리나 인스타 스토리💙",
    "url": "https://x.com/karinaofmoment/status/2111295681872937409",
-   "likes": 102,
-   "reposts": 16,
+   "likes": 128,
+   "reposts": 17,
    "quotes": 0,
    "replies": 1,
-   "bookmarks": 7,
-   "impressions": 3463,
+   "bookmarks": 5,
+   "impressions": 4704,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -337,12 +1481,12 @@
    "created_at": "2026-10-17T03:17:19.000Z",
    "text": "261017 #카리나 인스타💙\n\n낙엽 떨어지는 계절은 벽돌이랑 색이 비슷해서 그런가 잘어울린다\n#prada @ prada",
    "url": "https://x.com/karinaofmoment/status/2111295465295958301",
-   "likes": 566,
-   "reposts": 193,
-   "quotes": 12,
+   "likes": 781,
+   "reposts": 233,
+   "quotes": 11,
    "replies": 1,
-   "bookmarks": 93,
-   "impressions": 18125,
+   "bookmarks": 108,
+   "impressions": 27017,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -381,12 +1525,12 @@
    "created_at": "2026-10-17T03:16:04.000Z",
    "text": "261017 #카리나 인스타💙\n\n향수가 막 오네\n\n#prada @ prada \n\nPrada Essense",
    "url": "https://x.com/karinaofmoment/status/2111295149674213728",
-   "likes": 556,
-   "reposts": 179,
+   "likes": 679,
+   "reposts": 213,
    "quotes": 3,
    "replies": 1,
-   "bookmarks": 71,
-   "impressions": 8540,
+   "bookmarks": 76,
+   "impressions": 11573,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -425,12 +1569,12 @@
    "created_at": "2026-10-17T03:14:55.000Z",
    "text": "261015 #카리나 인스타 스토리💙",
    "url": "https://x.com/karinaofmoment/status/2111294859458089359",
-   "likes": 138,
-   "reposts": 26,
+   "likes": 196,
+   "reposts": 30,
    "quotes": 0,
    "replies": 0,
-   "bookmarks": 15,
-   "impressions": 3505,
+   "bookmarks": 17,
+   "impressions": 4961,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -456,12 +1600,12 @@
    "created_at": "2026-10-17T03:14:07.000Z",
    "text": "261015 #카리나 인스타💙\n\n요즘 내 최애 💚\n#스위티 #스프라이트제로위드티 \n\n포켓형\n\n스위티사이즈\n\n바통터치가능",
    "url": "https://x.com/karinaofmoment/status/2111294660761334170",
-   "likes": 239,
-   "reposts": 56,
+   "likes": 327,
+   "reposts": 68,
    "quotes": 1,
    "replies": 1,
-   "bookmarks": 36,
-   "impressions": 4769,
+   "bookmarks": 38,
+   "impressions": 6672,
    "is_reply": false,
    "is_quote": false,
    "media": [
@@ -500,12 +1644,12 @@
    "created_at": "2026-10-17T03:10:21.000Z",
    "text": "지민이랑 쑥쑥이🥺👶🏻",
    "url": "https://x.com/karinaofmoment/status/2111293711502225599",
-   "likes": 257,
-   "reposts": 64,
-   "quotes": 6,
+   "likes": 310,
+   "reposts": 65,
+   "quotes": 5,
    "replies": 0,
-   "bookmarks": 18,
-   "impressions": 6435,
+   "bookmarks": 21,
+   "impressions": 8604,
    "is_reply": false,
    "is_quote": false,
    "media": [
