@@ -54,8 +54,10 @@ h1{font-size:24px;line-height:1.4;margin:0 0 6px;font-weight:700}
 .meta{color:var(--ink2);font-size:13px;margin:0 0 28px}
 .syncmsg{margin-top:-20px}
 .syncmsg.bad{color:var(--accent)}
-.viewonly .zzim,.viewonly .pz,.viewonly #clearEv,.viewonly #openWork,.viewonly #evDel,.viewonly [data-rep],.viewonly [data-out],.viewonly [data-split]{opacity:.4;cursor:not-allowed}
-.viewonly #evName,.viewonly #evStart,.viewonly #evEnd{pointer-events:none;opacity:.6}
+.viewonly .zzim:not(.on),.viewonly .pz:not(.primary),.viewonly #clearEv,.viewonly #undoClear,.viewonly #openWork,.viewonly #evDel,.viewonly .cand .bt,.viewonly .help[data-help="clear"],.viewonly .help[data-help="zzim"]{display:none}
+.viewonly .ctl:has(.help[data-help="zzim"]){display:none}
+.viewonly .zzim.on,.viewonly .pz.primary{pointer-events:none;background:none;border-color:transparent;color:var(--accent);padding-left:0}
+.viewonly #evName,.viewonly #evStart,.viewonly #evEnd{pointer-events:none;border-color:transparent;background:none;padding-left:0}
 .dlbar .dlnote{font-size:12px;color:var(--ink2)}
 .tabsrow{margin-bottom:24px}
 .controls{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:flex-end;margin-bottom:28px}
@@ -96,7 +98,8 @@ button:disabled{opacity:.45;cursor:default}
 .day-head{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:4px}
 .day-head h2{font-size:18px;margin:0;font-weight:700;line-height:1.4}
 .day-head span{font-size:13px;color:var(--ink3)}
-.row{display:grid;grid-template-columns:32px 220px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.row{display:grid;grid-template-columns:32px 220px 1fr 76px;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.zc{align-self:center;justify-self:end}
 .rank{font-size:15px;font-weight:700;color:var(--ink3);padding-top:2px;text-align:right}
 .row.sel .rank{color:var(--accent)}
 .thumbs{display:grid;gap:2px;border-radius:6px;overflow:hidden;align-self:start;background:var(--line-soft)}
@@ -117,7 +120,7 @@ button:disabled{opacity:.45;cursor:default}
 .acts{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;align-items:center}
 .acts a{color:var(--accent);text-decoration:none}
 .acts a:hover{text-decoration:underline}
-.zzim{height:28px;padding:0 12px;font-size:13px;border-radius:14px;color:var(--ink2)}
+.zzim{height:40px;min-width:64px;padding:0 12px;font-size:14px;font-weight:600;border-radius:20px;color:var(--accent);border:1.5px solid var(--accent);background:var(--surface)}
 .zzim.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .evtags{font-size:12px;color:var(--accent)}
 .time{color:var(--ink3);font-size:12px}
@@ -127,9 +130,11 @@ button:disabled{opacity:.45;cursor:default}
 .bottom{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);
   padding:10px 16px;display:flex;justify-content:center;gap:12px;align-items:center;font-size:14px;z-index:10}
 .bottom .cnt{color:var(--ink2)}
+@media (max-width:420px){ #btnGo .long{display:none} }
 .bottom{flex-wrap:wrap;row-gap:6px}
 .dlbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;padding-right:14px;margin-right:2px;border-right:1px solid var(--line)}
-.dlbar .step{font-size:13px;font-weight:700;color:var(--accent)}
+.dlbar .lab{font-size:12px;color:var(--ink2)}
+.dlbar .val{font-size:13px;color:var(--ink)}
 .dlbar .num{font-size:13px;color:var(--ink2)}
 .dlmsg{flex-basis:100%;text-align:center;font-size:12px;color:var(--ink2);line-height:1.5}
 .dlmsg:empty{display:none}
@@ -153,11 +158,64 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
 .bubble{position:absolute;z-index:40;max-width:320px;background:var(--surface);border:1px solid var(--line);border-radius:8px;
   box-shadow:0 8px 28px rgba(0,0,0,.14);padding:12px 14px;font-size:13px;line-height:1.7;color:var(--ink)}
 .bubble b{display:block;margin-bottom:4px}
-.guide{margin:0 0 24px;padding:18px 20px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px;line-height:1.8}
+.guide{position:relative;margin:0 0 24px;padding:18px 20px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px;line-height:1.8}
+.guideclose{position:absolute;top:10px;right:10px;height:30px;border:0;background:none;color:var(--ink2);font-size:13px;padding:0 6px}
+.guideclose:hover{color:var(--ink)}
+.guideback{position:fixed;inset:0;z-index:59;background:rgba(0,0,0,.35)}
+@media (min-width:721px){ .guideback{display:none} }
+@media (max-width:720px){
+  .guide{position:fixed;left:12px;right:12px;bottom:12px;max-height:78vh;overflow:auto;z-index:60;margin:0;box-shadow:0 10px 40px rgba(0,0,0,.25);font-size:13px;line-height:1.7;padding:16px 16px 12px}
+  .meta{font-size:12px;margin-bottom:20px}
+  .syncmsg{margin-top:-14px}
+  .mast .ko{font-size:13px}
+  .tabsrow{margin-bottom:16px}
+}
 .guide h3{margin:0 0 8px;font-size:16px}
 .guide ol{margin:0;padding-left:20px}
 .guide li{margin-bottom:6px}
-.tabsrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tabsrow{display:block}
+.mast{position:relative}
+.guidebtn{position:absolute;top:0;right:0;height:auto;border:0;background:none;padding:2px 0;font-size:13px;color:var(--ink2);text-decoration:underline;text-underline-offset:3px}
+.guidebtn:hover{color:var(--ink)}
+.steps{display:flex;border-bottom:1px solid var(--line)}
+.steps button{flex:1 1 0;height:auto;border:0;border-radius:0;background:none;padding:10px 10px 12px;margin-bottom:-1px;
+  display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center;text-align:left;color:var(--ink3);border-bottom:3px solid transparent}
+.steps .no{grid-row:span 2;width:24px;height:24px;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+.steps b{font-size:15px;font-weight:600;line-height:1.3}
+.steps small{font-size:12px;line-height:1.4}
+.steps button:hover{color:var(--ink2)}
+.steps button.on{color:var(--ink);border-bottom-color:var(--accent)}
+.steps button.on .no{background:var(--accent);border-color:var(--accent);color:#fff}
+#pickView button.on{background:var(--ink);color:var(--surface)}
+.filt{flex-basis:100%}
+.filt > summary{display:none}
+.filtin{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:flex-end}
+@media (max-width:720px){
+  .filt > summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;font-size:13px;color:var(--ink2);
+    border:1px solid var(--line);border-radius:6px;padding:8px 12px}
+  .filt > summary::-webkit-details-marker{display:none}
+  .filt .fl{color:var(--ink3);font-size:12px}
+  .filt #filtSum{flex:1;color:var(--ink)}
+  .filt .chg{font-size:12px;color:var(--accent)}
+  .filt[open] .chg{color:var(--ink3)}
+  .filtin{gap:12px;margin-top:12px}
+}
+.modal{position:fixed;z-index:60;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100vw - 32px));max-height:80vh;overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 22px 18px;box-shadow:0 10px 40px rgba(0,0,0,.25);font-size:14px;line-height:1.75;word-break:keep-all}
+.modal h3{margin:0 0 6px;font-size:17px}
+.modal .st{color:var(--ink2);margin:0 0 16px}
+.modal ol{margin:0 0 16px;padding-left:20px}
+.modal li{margin-bottom:6px}
+.modal .scope{font-size:13px;color:var(--ink2);border-top:1px solid var(--line);padding-top:12px;margin:0 0 16px}
+.modal .end{display:flex;justify-content:flex-end}
+.more{position:relative}
+.more summary{list-style:none;cursor:pointer;font-size:12px;color:var(--ink2);height:28px;line-height:26px;padding:0 10px;border:1px solid var(--line);border-radius:6px}
+.more summary::-webkit-details-marker{display:none}
+.more[open] summary{color:var(--ink)}
+.more .menu{position:absolute;right:0;top:32px;z-index:20;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;width:240px;
+  display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.more .menu button{justify-content:flex-start;text-align:left}
+.more .menu p{margin:0 0 4px;font-size:12px;color:var(--ink3);line-height:1.6;word-break:keep-all}
 /* 떡밥 고르기 창 */
 .pop{position:absolute;z-index:30;background:var(--surface);border:1px solid var(--line);border-radius:8px;
   box-shadow:0 8px 28px rgba(0,0,0,.14);padding:12px;width:280px;font-size:13px}
@@ -255,7 +313,12 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
 }
 @media (max-width:720px){
   .wrap{padding:24px 16px 120px}
-  .row{grid-template-columns:20px 104px 1fr;gap:12px;padding:16px 0}
+  .row{grid-template-columns:18px 92px 1fr 56px;gap:10px;padding:16px 0}
+  .zzim{height:44px;min-width:56px;padding:0 8px;font-size:13px;border-radius:22px}
+  .steps button{grid-template-columns:1fr;justify-items:center;text-align:center;padding:8px 2px 10px;row-gap:3px}
+  .steps .no{grid-row:auto;width:20px;height:20px;font-size:11px}
+  .steps b{font-size:14px}
+  .steps small{display:none}
   .rank{font-size:14px}
   .thumbs.n1 a{aspect-ratio:1/1;max-height:none}
   .thumbs.n1 img{height:100%;max-height:none}
@@ -266,7 +329,6 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
   .ctl{flex:1 1 140px}
   .ctl input,.ctl select{width:100%}
   .ctl.wide{flex:1 1 100%}
-  .tabsrow .seg{display:flex;width:100%;overflow-x:auto}
   .seg{display:flex;width:100%}
   .seg button{flex:1 1 0;padding:6px 4px}
   .chart-head{flex-direction:column;gap:2px}
@@ -285,6 +347,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
 <body>
 <div class="wrap">
   <header class="mast">
+    <button class="guidebtn" id="guideBtn">사용법 보기</button>
     <p class="over" id="overline">YEAR-END ARCHIVE</p>
     <h1 class="logo" id="title"><span>karina</span> <em>of</em> <span>moment</span></h1>
     <p class="ko">순간의 카리나 · 연말결산 <a id="acct" href="#" target="_blank" rel="noopener"></a></p>
@@ -299,25 +362,30 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
   </div>
 
   <div id="app" hidden>
-    <div class="tabsrow">
-      <div class="seg" id="view">
-        <button data-v="cal" class="on">떡밥 캘린더</button><button data-v="list">떡밥 목록</button><button data-v="day">일자별</button><button data-v="month">월별</button><button data-v="range">기간 전체 순위</button>
+    <nav class="tabsrow" aria-label="작업 단계">
+      <div class="steps" id="view">
+        <button data-v="pick"><span class="no">1</span><b>고르기</b><small>순위에서 찜</small></button>
+        <button data-v="cal"><span class="no">2</span><b>정리하기</b><small>캘린더에서 떡밥 다듬기</small></button>
+        <button data-v="list"><span class="no">3</span><b>확인·저장</b><small>목록 확인하고 받을 것 정하기</small></button>
       </div>
-      <button class="sm" id="guideBtn">처음이면 여기! 사용법</button>
-    </div>
+    </nav>
+    <div class="guideback" id="guideBack" hidden></div>
     <div class="guide" id="guide" hidden>
+      <button class="guideclose" id="guideClose" aria-label="사용법 접기">접기 ▲</button>
       <h3>이렇게 사용합니다</h3>
       <ol>
-        <li><b>둘러보기</b> · 일자별 / 월별 / 기간 전체 순위에서 반응 좋은 트윗을 찾습니다. 위 막대그래프를 누르면 그날로 바로 이동합니다</li>
-        <li><b>찜</b> · 마음에 드는 트윗의 [찜]을 누르면 떡밥에 담깁니다. 담기면 버튼이 [밍💙]으로 바뀝니다</li>
-        <li><b>떡밥 캘린더</b> · 고른 트윗이 달력에 채워집니다. 파란 막대(떡밥)를 누르면 이름·기간·대표를 고칠 수 있고, 여러 날 활동은 기간을 늘리면 됩니다</li>
-        <li id="guideStep4"><b>떡밥 목록</b> · 화면 맨 아래 고정된 <b>받기</b> 줄에서 [대표만] 또는 [후보 포함]을 고르고 [다운로드 목록 저장]을 누릅니다</li>
-        <li id="guideStep5"><b>받기</b> · 도구 폴더의 <b>2_사진영상_받기</b> 를 더블클릭하면 떡밥 이름 폴더로 사진·영상이 저장됩니다</li>
+        <li id="guideStep1"><b>1 고르기</b> · 일자별 / 월별 / 기간 전체 순위에서 반응 좋은 트윗을 보고 오른쪽 [찜]을 누릅니다. 담기면 [밍💙]으로 바뀝니다. 위 막대그래프를 누르면 그날로 이동합니다</li>
+        <li id="guideStep2"><b>2 정리하기</b> · 고른 트윗이 날짜별 떡밥으로 캘린더에 채워집니다. 파란 막대(떡밥)를 누르면 이름·기간·대표를 고칠 수 있고, 여러 날 활동은 기간을 늘리면 됩니다</li>
+        <li id="guideStep3"><b>3 확인·저장</b> · 목록에서 떡밥을 확인하고, 맨 아래에서 [대표만] 또는 [후보 포함]을 고른 뒤 [다운로드 목록 저장]을 누릅니다</li>
+        <li id="guideStep4"><b>받기</b> · 도구 폴더의 <b>2_사진영상_받기</b> 를 더블클릭하면 떡밥 이름 폴더로 사진·영상이 저장됩니다</li>
       </ol>
-      <p class="sidenote" style="margin:10px 0 0">i 표시에 마우스를 올리거나 누르면 그 자리 설명이 나옵니다. 이 안내는 위 버튼을 다시 누르면 접힙니다</p>
+      <p class="sidenote" style="margin:10px 0 0">i 표시를 누르면 그 자리 설명이 나옵니다</p>
     </div>
 
     <div class="controls" id="controls">
+      <div class="ctl wide"><label>순위 보는 방법</label>
+        <div class="seg" id="pickView"><button data-v="day" class="on">일자별</button><button data-v="month">월별</button><button data-v="range">기간 전체 순위</button></div></div>
+      <details class="filt" id="filt"><summary><span class="fl">조건</span><span id="filtSum"></span><span class="chg">바꾸기</span></summary><div class="filtin">
       <div class="ctl"><label for="from">시작일</label><input type="date" id="from"></div>
       <div class="ctl"><label for="to">종료일</label><input type="date" id="to"></div>
       <div class="ctl"><label for="metric">순위 기준</label>
@@ -334,6 +402,7 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       <div class="ctl" style="align-self:flex-end;padding-bottom:6px"><span class="sidenote" style="margin:0">찜 하는 법<button class="help" data-help="zzim" aria-label="찜 하는 법">i</button></span></div>
       <div class="ctl wide"><label>종류</label>
         <div class="seg" id="kind"><button data-v="all" class="on">전체</button><button data-v="photo">사진</button><button data-v="video">영상</button></div></div>
+      </div></details>
     </div>
 
     <section class="chart" id="chartBox">
@@ -360,6 +429,8 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
 <div class="tip" id="tip"></div>
 <button class="totop" id="toTop" aria-label="맨 위로">맨 위로</button>
 <input type="file" id="loadWork" accept=".json,application/json" hidden>
+<div class="guideback" id="saveBack" hidden></div>
+<div class="modal" id="saveBox" hidden role="dialog" aria-labelledby="saveTitle"></div>
 
 <script>
 (function(){
@@ -505,20 +576,35 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     if(saved.kind) setSeg("kind", saved.kind);
     var v = saved.view || (window.innerWidth<720 ? "list" : "cal");
     if(v==="sel") v="list";
+    if(!W.events.length) v = (stepOf(v)==="pick" ? v : "day");
     setSeg("view", v);
     state.calMonth = saved.calMonth || state.last.slice(0,7);
     $("app").hidden=false; $("bottom").hidden=false; $("loader").hidden=true;
-    if(!store("xyr-guide-seen")){ $("guide").hidden=false; $("guideBtn").textContent="사용법 접기"; }
-    if(SYNC){
-      $("guideStep4").innerHTML='<b>떡밥 목록</b> · 화면 맨 아래 고정된 <b>받기</b> 줄에서 [대표만] 또는 [후보 포함]을 고릅니다. 폰에서 고른 떡밥도 PC 에 자동으로 맞춰집니다';
-      $("guideStep5").innerHTML='<b>받기</b> · PC 도구 폴더의 <b>2_사진영상_받기</b> 를 더블클릭하면 고른 떡밥이 떡밥 이름 폴더로 저장됩니다';
-      HELP.backup=["백업 파일이란?","고른 떡밥은 폰과 PC 에 자동으로 맞춰지고 인터넷에도 보관됩니다. 그래도 따로 남겨 두고 싶으면 [백업 파일 만들기]를 눌러 파일로 저장하고, 나중에 [백업 파일 열기]로 그 파일을 고르면 그대로 복원됩니다."];
-      HELP.download=["사진·영상 받는 법","[대표만]은 떡밥마다 대표 1개만, [후보 포함]은 고른 트윗 전부를 받습니다. 여기서 고른 설정은 PC 에도 자동으로 맞춰집니다. PC 도구 폴더의 2_사진영상_받기 를 더블클릭하면 떡밥 이름 폴더로 저장됩니다."];
+    setGuide(!store("xyr-guide-seen") && window.innerWidth>720);
+    $("filt").open = window.innerWidth>720;
+    if(SYNC && SYNC.view){
+      $("guideStep1").innerHTML='<b>지켜보기 전용</b> · '+esc(SYNC.user)+' 님이 고른 떡밥이 20초쯤 안에 자동으로 나타납니다. 여기서는 찜하거나 고칠 수 없습니다';
+      $("guideStep3").innerHTML='<b>3 확인·저장</b> · 맨 아래에 '+esc(SYNC.user)+' 님 PC 에서 받을 범위가 표시됩니다';
+      $("guideStep4").hidden=true;
+    } else if(SYNC){
+      $("guideStep3").innerHTML='<b>3 확인·저장</b> · 목록에서 떡밥을 확인하고, 맨 아래에서 [대표만] 또는 [후보 포함]을 고른 뒤 [저장하기]를 누릅니다. 고른 것은 고칠 때마다 자동으로도 저장되고, 폰과 PC 에 같이 맞춰집니다';
+      $("guideStep4").innerHTML='<b>받기</b> · PC 도구 폴더의 <b>2_사진영상_받기</b> 를 더블클릭하면 고른 떡밥이 떡밥 이름 폴더로 저장됩니다. 폰에서 고른 것도 그대로 받아집니다';
+      HELP.download=["PC에서 받을 것","[대표만]은 떡밥마다 대표 1개만, [후보 포함]은 고른 트윗 전부를 받습니다. 고르고 [저장하기]를 누르면 PC 에서 할 일을 알려 드립니다."];
     }
     render();
     syncNow();
   }
-  function setSeg(id,v){ state[id]=v; Array.prototype.forEach.call($(id).children,function(b){ b.classList.toggle("on", b.dataset.v===v); }); }
+  function stepOf(v){ return (v==="cal"||v==="list") ? v : "pick"; }
+  function setSeg(id,v){
+    state[id]=v;
+    if(id==="view"){
+      if(stepOf(v)==="pick") state.lastPick=v;
+      Array.prototype.forEach.call($("view").children,function(b){ b.classList.toggle("on", b.dataset.v===stepOf(v)); });
+      Array.prototype.forEach.call($("pickView").children,function(b){ b.classList.toggle("on", b.dataset.v===v); });
+      return;
+    }
+    Array.prototype.forEach.call($(id).children,function(b){ b.classList.toggle("on", b.dataset.v===v); });
+  }
   function filtered(){ var f=$("from").value,to=$("to").value,k=state.kind; return ALL.filter(function(t){ return t._day>=f && t._day<=to && (k==="all"||hasKind(t,k)); }); }
 
   function render(){
@@ -526,6 +612,9 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     var metric=$("metric").value, topn=+$("topn").value;
     store("xyr-ui",{from:$("from").value,to:$("to").value,metric:metric,topn:$("topn").value,kind:state.kind,view:state.view,calMonth:state.calMonth});
     var browse = state.view==="day"||state.view==="month"||state.view==="range";
+    var kindTxt={all:"사진·영상",photo:"사진만",video:"영상만"}[state.kind]||"";
+    var cnt = topn>999 ? "전부" : (state.view==="month" ? "한 달 "+topn+"개" : state.view==="range" ? "상위 "+Math.max(topn*5,50)+"개" : "하루 "+topn+"개");
+    $("filtSum").textContent = METRIC_LABEL[metric]+" 순 · "+cnt+" · "+kindTxt+(($("from").value!==state.first||$("to").value!==state.last)?" · 기간 지정":"");
     $("controls").hidden=!browse; $("chartBox").hidden=!browse; $("summary").hidden=!browse;
     $("topnLabel").textContent = state.view==="month" ? "한 달 몇 개" : state.view==="range" ? "몇 개 (×5)" : "하루 몇 개";
     if(state.view==="cal") renderCal();
@@ -586,8 +675,8 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     return '<article class="row'+(on?' sel':'')+'" data-id="'+t.id+'"><div class="rank">'+rank+'</div>'+thumbs+
       '<div class="body"><p class="text">'+esc(t.text)+'</p><div class="stats">'+stats+'</div>'+
       '<div class="acts"><span class="time">'+(showDay?t._day+' ':'')+timeFmt.format(new Date(t.created_at))+'</span>'+
-      '<a href="'+esc(t.url)+'" target="_blank" rel="noopener">트윗 열기</a>'+mlinks+
-      '<button class="zzim'+(on?' on':'')+'">'+(on?'밍💙':'찜')+'</button>'+tags+'</div></div></article>';
+      '<a href="'+esc(t.url)+'" target="_blank" rel="noopener">트윗 열기</a>'+mlinks+tags+'</div></div>'+
+      '<div class="zc"><button class="zzim'+(on?' on':'')+'" aria-pressed="'+on+'">'+(on?'밍💙':'찜')+'</button></div></article>';
   }
 
   function renderChart(items, metric){
@@ -728,7 +817,11 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     if(state.listMonth!=="all" && !months[state.listMonth]) state.listMonth="all";
     var shown=evs.filter(function(e){ return state.listMonth==="all" || e.start.slice(0,7)===state.listMonth; });
     var h='<div class="tools"><select id="listMonth" aria-label="달 고르기"><option value="all">전체 ('+evs.length+')</option>'+ml.map(function(k){ return '<option value="'+k+'"'+(state.listMonth===k?' selected':'')+'>'+k.slice(0,4)+'년 '+(+k.slice(5))+'월</option>'; }).join("")+'</select>'+
-      '<span class="sp"></span><button class="sm" id="clearEv">'+(state.listMonth==="all"?"떡밥 전체 비우기":"이 달 떡밥 비우기")+'</button>'+help("clear")+(state.undo?'<button class="sm" id="undoClear">되돌리기</button>':'')+'<button class="sm" id="saveWork">백업 파일 만들기</button><button class="sm" id="openWork">백업 파일 열기</button>'+help("backup")+'</div>';
+      '<span class="sp"></span>'+(state.undo?'<button class="sm" id="undoClear">비운 것 되돌리기</button>':'')+
+      (SYNC&&SYNC.view ? '' : '<details class="more"><summary>더보기</summary><div class="menu">'+
+        '<p>'+(SYNC?'고른 떡밥은 고칠 때마다 자동으로 저장됩니다. 아래는 혹시 몰라 파일로 따로 남겨 둘 때만 씁니다':'고른 떡밥은 이 브라우저에 자동으로 저장됩니다. 다른 컴퓨터로 옮기거나 따로 남겨 둘 때 파일로 보관합니다')+'</p>'+
+        '<button class="sm" id="saveWork">파일로 따로 보관하기</button><button class="sm" id="openWork">보관한 파일 불러오기</button>'+
+        '<button class="sm" id="clearEv">'+(state.listMonth==="all"?"떡밥 전체 비우기":"이 달 떡밥 비우기")+'</button></div></details>')+'</div>';
     if(!shown.length){ renderDlBar(shown); h+='<div class="empty">아직 떡밥이 없습니다. 일자별·월별 화면에서 마음에 드는 트윗의 [찜]을 누르면 여기에 쌓입니다</div>'; $("list").innerHTML=h; return; }
     var cur="";
     shown.forEach(function(e){
@@ -739,17 +832,21 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
       h+='<div class="it" data-ev="'+e.id+'"><div class="dt">'+md(e.start)+(n>1?' – '+md(e.end)+'<small>'+n+'일</small>':'<small>하루</small>')+'</div>'+
         '<div class="rep">'+(rep?imgTag(rep):'')+(v?'<span class="v">'+v+'</span>':'')+'</div>'+
         '<div><h4>'+esc(e.name)+'</h4><p class="tx">'+(rep?esc((rep.text||"").slice(0,70)):'')+'</p><p class="ss">대표 · 마음 '+(rep?nf.format(rep.likes):'-')+' · 노출 '+(rep?nf.format(rep.impressions):'-')+'</p></div>'+
-        '<div><div class="minis">'+others.slice(0,4).map(function(t){return '<div>'+imgTag(t)+'</div>';}).join("")+'</div><div class="cn">후보 '+others.length+'개 · 눌러서 고치기</div></div></div>';
+        '<div><div class="minis">'+others.slice(0,4).map(function(t){return '<div>'+imgTag(t)+'</div>';}).join("")+'</div><div class="cn">후보 '+others.length+'개 · 눌러서 '+(SYNC&&SYNC.view?'보기':'고치기')+'</div></div></div>';
     });
     var cnt=dlStats(shown);
     renderDlBar(shown); $("list").innerHTML=h; return;
   }
   function renderDlBar(shown){
     var cnt=dlStats(shown);
-    $("dlBar").innerHTML='<span class="step">받기</span><div class="seg sm" id="listMode"><button data-v="rep"'+(state.listMode==="rep"?' class="on"':'')+'>대표만</button><button data-v="all"'+(state.listMode==="all"?' class="on"':'')+'>후보 포함</button></div>'+
-      '<span class="num">트윗 '+cnt[0]+'개 · 사진 '+cnt[1]+'장 · 영상 '+cnt[2]+'개</span>'+
-      (SYNC ? '<span class="dlnote">PC 의 2_사진영상_받기 가 '+(state.listMonth==="all"?'':'이 달 떡밥만 ')+'이대로 받습니다</span>'
-            : '<button class="primary" id="dlList"'+(cnt[0]?'':' disabled')+'>다운로드 목록 저장</button>')+help("download");
+    var num='<span class="num">트윗 '+cnt[0]+' · 사진 '+cnt[1]+' · 영상 '+cnt[2]+(state.listMonth==="all"?'':' (이 달만)')+'</span>';
+    var seg='<div class="seg sm" id="listMode"><button data-v="rep"'+(state.listMode==="rep"?' class="on"':'')+'>대표만</button><button data-v="all"'+(state.listMode==="all"?' class="on"':'')+'>후보 포함</button></div>';
+    if(SYNC && SYNC.view)
+      $("dlBar").innerHTML='<span class="lab">PC에서 받을 것</span><span class="val">'+(state.listMode==="rep"?"대표만":"후보 포함")+'</span>'+num;
+    else if(SYNC)
+      $("dlBar").innerHTML='<span class="lab">PC에서 받을 것</span>'+seg+num+help("download");
+    else
+      $("dlBar").innerHTML='<span class="lab">받을 것</span>'+seg+num+'<button class="primary" id="dlList"'+(cnt[0]?'':' disabled')+'>다운로드 목록 저장</button>'+help("download");
     $("dlMsg").innerHTML='';
   }
   function dlRows(evs){
@@ -829,7 +926,12 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     var lv=state.view==="list";
     $("dlBar").hidden=!lv; document.body.classList.toggle("listview", lv); if(!lv) $("dlMsg").innerHTML='';
     $("selCnt").textContent="떡밥 "+W.events.length+"개 · 고른 트윗 "+pickedCount()+"개";
-    $("btnGo").textContent = state.view==="list" ? "떡밥 캘린더 보기" : "떡밥 목록 보기";
+    var st=stepOf(state.view), go=$("btnGo");
+    go.hidden=false;
+    if(st==="pick") go.innerHTML='다음 <span class="long">· 2 캘린더에서 정리</span>';
+    else if(st==="cal") go.innerHTML='다음 <span class="long">· 3 확인·저장</span>';
+    else if(SYNC && !SYNC.view) go.textContent='저장하기';
+    else go.hidden=true;
   }
 
   // ---------- 이벤트
@@ -837,17 +939,31 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     if($("from").value>$("to").value){ if(id==="from") $("to").value=$("from").value; else $("from").value=$("to").value; }
     render(); }); });
   $("kind").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; setSeg("kind",b.dataset.v); render(); });
-  $("view").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; setSeg("view",b.dataset.v); render(); window.scrollTo(0,0); });
+  $("view").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return;
+    var v=b.dataset.v==="pick" ? (state.lastPick||"day") : b.dataset.v; setSeg("view",v); render(); window.scrollTo(0,0); });
+  $("pickView").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; setSeg("view",b.dataset.v); render(); });
   document.addEventListener("keydown", function(e){
+    if(e.key==="Escape" && !$("saveBox").hidden){ closeSave(); return; }
+    if(e.key==="Escape" && !$("guide").hidden){ setGuide(false); return; }
     if(e.key==="Escape" && state.view==="cal" && (state.selDay||state.selEv) && !popEl){ state.selDay=null; state.selEv=null; render(); }
   });
-  $("guideBtn").addEventListener("click", function(){ var g=$("guide"); g.hidden=!g.hidden; this.textContent=g.hidden?"처음이면 여기! 사용법":"사용법 접기"; store("xyr-guide-seen",1); });
+  function setGuide(open){
+    $("guide").hidden=!open; $("guideBack").hidden=!open;
+    $("guideBtn").hidden = open;
+  }
+  $("guideBtn").addEventListener("click", function(){ setGuide($("guide").hidden); store("xyr-guide-seen",1); });
+  $("guideClose").addEventListener("click", function(){ setGuide(false); store("xyr-guide-seen",1); });
+  $("guideBack").addEventListener("click", function(){ setGuide(false); store("xyr-guide-seen",1); });
   $("bottom").addEventListener("click", function(e){
     var b=e.target.closest("button"); if(!b) return;
     if(b.id==="dlList"){ exportDl(); return; }
     if(b.closest("#listMode")){ state.listMode=b.dataset.v; setDl(); render(); return; }
   });
-  $("btnGo").addEventListener("click", function(){ setSeg("view", state.view==="list"?"cal":"list"); render(); window.scrollTo(0,0); });
+  $("btnGo").addEventListener("click", function(){
+    var st=stepOf(state.view);
+    if(st==="list"){ saveNow(); return; }
+    setSeg("view", st==="pick" ? "cal" : "list"); render(); window.scrollTo(0,0);
+  });
   document.addEventListener("click", function(e){ if(popEl && !popEl.contains(e.target) && !e.target.closest(".zzim") && !e.target.closest(".pz")) closePop(); });
 
   $("list").addEventListener("click", function(e){
@@ -1033,6 +1149,39 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     if(state.selEv && !evById(state.selEv)) state.selEv=null;
     if(DATA){ if(busyUI()) sy.pending=true; else render(); }
   }
+  // [저장하기]: 바로 보내고, 끝나면 다음에 할 일을 안내
+  var afterSync=[];
+  function saveNow(){
+    if(!SYNC || SYNC.view) return;
+    showSave("busy");
+    afterSync.push(function(ok){ showSave(ok?"ok":"fail"); });
+    sy.dirty=true; clearTimeout(sy.timer); syncNow();
+  }
+  function closeSave(){ $("saveBox").hidden=true; $("saveBack").hidden=true; }
+  function showSave(kind){
+    var evs=sortedEvents().filter(function(e){ return state.listMonth==="all" || e.start.slice(0,7)===state.listMonth; }), c=dlStats(evs);
+    var title = kind==="busy" ? "저장하는 중입니다" : kind==="ok" ? "저장했습니다" : "아직 이 기기에만 저장되어 있습니다";
+    var st = kind==="busy" ? "잠시만 기다려 주세요"
+      : kind==="ok" ? timeFmt.format(new Date())+" 기준으로 저장했습니다. 폰과 PC 어디서 열어도 지금 목록 그대로 보입니다"
+      : "인터넷에 연결되지 않았습니다. 연결되면 자동으로 저장되니 이 화면을 닫아도 됩니다";
+    var h='<h3 id="saveTitle">'+title+'</h3><p class="st">'+st+'</p>';
+    if(kind!=="busy"){
+      h+='<p style="margin:0 0 6px;font-weight:600">다음에 할 일</p><ol>'+
+        '<li>PC 에서 받은 연말결산 폴더를 엽니다</li>'+
+        '<li><b>2_사진영상_받기</b> 를 더블클릭합니다</li>'+
+        '<li>검은 창에 나온 목록이 맞으면 Enter 를 누릅니다</li>'+
+        '<li>다 받으면 <b>받은_사진영상</b> 폴더가 열리고, 떡밥마다 폴더가 하나씩 생깁니다</li></ol>'+
+        '<p class="scope">받을 것: '+(state.listMonth==="all"?"전체 떡밥":esc(state.listMonth.slice(0,4)+"년 "+(+state.listMonth.slice(5))+"월 떡밥만"))+' · '+(state.listMode==="rep"?"대표만":"후보 포함")+
+        '<br>떡밥 '+evs.length+'개 · 트윗 '+c[0]+' · 사진 '+c[1]+' · 영상 '+c[2]+
+        (window.innerWidth<720?'<br>폰에서는 받을 수 없으니 PC 에서 해 주세요. 더 고르고 싶으면 언제든 이어서 고르면 됩니다':'<br>더 고르고 싶으면 언제든 이어서 고르고, 받기를 다시 실행하면 새로 고른 것만 더 받습니다')+'</p>'+
+        '<div class="end"><button class="primary" id="saveOk">확인</button></div>';
+    }
+    $("saveBox").innerHTML=h; $("saveBox").hidden=false; $("saveBack").hidden=false;
+    var ok=$("saveOk"); if(ok) ok.focus();
+  }
+  document.addEventListener("click", function(e){
+    if(e.target.id==="saveOk" || e.target.id==="saveBack") closeSave();
+  });
   function syncSoon(){
     if(!SYNC || SYNC.view) return;
     sy.dirty=true; showSync();
@@ -1054,29 +1203,31 @@ details summary{font-size:12px;color:var(--ink3);cursor:pointer;margin-top:8px}
     }
     req.then(function(r){ return r.json(); }).then(function(j){
       clearTimeout(killer); sy.busy=false;
-      if(!j || !j.ok){ sy.ok=false; sy.err=(j&&j.error)||"bad"; if(push) sy.dirty=true; showSync(); return; }
+      if(!j || !j.ok){ sy.ok=false; sy.err=(j&&j.error)||"bad"; if(push) sy.dirty=true; showSync(); fireAfter(false); return; }
       sy.ok=true; sy.err=""; sy.last=Date.now();
+      if(push) fireAfter(true);
       applyRemote(j.work||{});
       showSync();
       if(sy.dirty){ clearTimeout(sy.timer); sy.timer=setTimeout(syncNow, 800); }
     }).catch(function(){
-      clearTimeout(killer); sy.busy=false; sy.ok=false; sy.err="net"; if(push) sy.dirty=true; showSync();
+      clearTimeout(killer); sy.busy=false; sy.ok=false; sy.err="net"; if(push) sy.dirty=true; showSync(); fireAfter(false);
     });
   }
+  function fireAfter(ok){ var a=afterSync; afterSync=[]; a.forEach(function(f){ try{ f(ok); }catch(e){} }); }
   function showSync(){
     var el=$("syncMsg"); if(!el) return;
     var t="", bad=false;
     if(!SYNC){
       if(/^https?:/.test(location.protocol)){ t="이 기기는 아직 폰·PC 동기화가 연결되지 않았습니다. 받은 링크로 한 번 열어 주세요 (고른 떡밥은 이 기기에만 저장됩니다)"; bad=true; }
     } else if(sy.busy || (sy.dirty && sy.ok!==false)){
-      t="폰·PC 동기화 중입니다";
+      t=SYNC.user+" 님 찜 목록 · 저장하는 중";
     } else if(sy.ok===false){
       bad=true;
       t = sy.err==="key" ? "동기화 주소가 맞지 않습니다. 받은 링크로 다시 열어 주세요 (고른 떡밥은 이 기기에 저장되어 있습니다)"
         : "인터넷에 연결되지 않아 고른 떡밥은 이 기기에만 저장되어 있습니다. 연결되면 자동으로 맞춥니다";
     } else if(sy.ok){
-      t = SYNC.view ? "지켜보기 전용 · "+SYNC.user+" 님 찜 목록 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤 (여기서는 고칠 수 없습니다)"
-                    : SYNC.user+" 님 찜 목록 · 폰·PC 자동 동기화 켜짐 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤";
+      t = SYNC.view ? "지켜보기 전용 · "+SYNC.user+" 님 찜 목록 · "+timeFmt.format(new Date(sy.last))+" 에 맞춤"
+                    : SYNC.user+" 님 찜 목록 · 자동 저장됨 "+timeFmt.format(new Date(sy.last))+" · 폰·PC 같이 맞춰짐";
     }
     el.textContent=t; el.hidden=!t; el.classList.toggle("bad", bad);
   }
